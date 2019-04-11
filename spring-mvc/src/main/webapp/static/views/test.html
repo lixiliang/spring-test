@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="/static/js/push-sdk-1.0.0.js" type="application/javascript"></script>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+    Push.init({
+        hostname: "192.168.10.210:8010",
+        clientId: 115115244093521,
+        heartbeatInterval: 30000,
+        reconnectInterval: 10000,
+        debug: true
+    });
+    Push.onErrorHandler = function (code, data) {
+        console.error(code);
+        console.error(data);
+    };
+    Push.onMessageHandler = function (data) {
+        console.log(data);
+        // let messageObject = JSON.parse(data);
+        // let messagesArray = messageObject['body']['messages'];
+        // let msgIds = messagesArray.map(item => item['msgId']);
+        // Push.ack(msgIds);
+    };
+    Push.onCloseHandler = function (data) {
+        console.log(data);
+    };
+    Push.connect();
+</script>
+</html>
