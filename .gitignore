@@ -1,0 +1,12 @@
+target/
+.classpath
+.project
+.settings/
+/logs/
+.idea/
+*.iml
+*.eml
+*rebel.xml
+logs/
+*.versionsBackup
+/.idea/workspace.xml
