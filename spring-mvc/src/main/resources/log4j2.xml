@@ -8,7 +8,7 @@
 
 <configuration status="WARN" monitorInterval="30">
     <Properties>
-        <Property name="log_home">${sys:catalina.home}/logs</Property>
+        <Property name="log_home">logs</Property>
         <Property name="log_name">spring-mvc</Property>
     </Properties>
 

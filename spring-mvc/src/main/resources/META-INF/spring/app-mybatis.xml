@@ -19,6 +19,17 @@
         <property name="maxActive" value="${ds.maxActive}"/>
         <property name="maxIdle" value="${ds.maxIdle}"/>
         <property name="minIdle" value="${ds.minIdle}"/>
+        <property name="maxWait" value="${ds.maxWait}"/>
+        <property name="testOnBorrow" value="true"/>
+        <property name="validationQuery" value="select 1"/>
+        <property name="initialSize" value="${ds.initialSize}"/>
+        <property name="validationInterval" value="${ds.validationInterval}"/>
+        <property name="timeBetweenEvictionRunsMillis" value="${ds.timeBetweenEvictionRunsMillis}"/>
+        <property name="removeAbandonedTimeout" value="${ds.removeAbandonedTimeout}"/>
+        <property name="removeAbandoned" value="${ds.removeAbandoned}"/>
+        <property name="logAbandoned" value="true"/>
+        <property name="minEvictableIdleTimeMillis" value="${ds.minEvictableIdleTimeMillis}"/>
+        <property name="jdbcInterceptors" value="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"/>
     </bean>
 
 

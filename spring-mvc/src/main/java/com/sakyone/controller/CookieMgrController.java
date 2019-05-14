@@ -19,6 +19,12 @@ public class CookieMgrController {
     @RequestMapping(value = "/cookie", method = {RequestMethod.GET})
     public String cookie(HttpServletRequest request, Model model) {
 //        model.addAttribute("token", TokenUtils.decode(request));
+        System.out.println("uri: "+request.getRequestURI());
+        System.out.println("url: "+request.getRequestURL());
+        System.out.println("query string: "+request.getQueryString());
+        System.out.println("scheme: "+request.getScheme());
+        System.out.println("scheme-x-forwarde-proto: "+request.getHeader("X-Forwarded-Proto"));
+
         return "cookie";
     }
     @RequestMapping(value = "/cookie", method = {RequestMethod.POST})

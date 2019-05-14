@@ -8,8 +8,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="https://test.sakyone.com/demo/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<%=path%>/static/bootstrap/css/bootstrap-theme.min.css">
+	<%--<script type="text/javascript" src="<%=path%>/static/js/jquery-3.2.1.min.js"></script>--%>
+	<script type="text/javascript" src="https://test.sakyone.com/demo/static/js/jquery-3.2.1.min.js"></script>
 <title></title>
 </head>
 <body>
@@ -21,6 +23,6 @@
 			<input type="text" name="cookie" class="input" />
 			<button class="btn-primary">提交</button>
 		</div>
-
+		<img src="https://test.sakyone.com/demo/static/image/canyin-jsssdk-flow.png" alt="">
 	</form>
 </body>

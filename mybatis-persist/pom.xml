@@ -63,4 +63,19 @@
             </build>
         </profile>
     </profiles>
+    <build>
+
+        <!-- 资源目录，需包含src/main/java 目录，重要！！！ -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 </project>

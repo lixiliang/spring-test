@@ -1,13 +1,16 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <head>
     <meta charset="UTF-8" />
     <title>Test20</title>
-    <link rel="stylesheet" type="text/css" href="@{bootstrap/css/bootstrap.min.css}">
-    <link rel="stylesheet" type="text/css" href="@{bootstrap/css/bootstrap-theme.min.css}">
-
 </head>
 <body>
-<div class="panel panel-primary">
+<h1>index page</h1>
+<%--<div class="panel panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">访问Model</h3>
     </div>
@@ -30,15 +33,12 @@
             </ul>
         </div>
     </div>
-</div>
-<script th:src="@{jquery-3.2.1.min.js}" type="text/javascript"></script>
-<script th:src="@{bootstrap/js/bootstrap.min.js}" type="text/javascript"></script>
-<script th:inline="javascript">
-    var single = [[${singlePerson}]];
-    console.log(single.name+"/"+single.age);
-    function getName(name) {
-        console.log(name);
-    }
+</div>--%>
+<script type="text/javascript" src="https://test.sakyone.com/demo/static/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $.get("<%=path%>/index/ajax","{data:'1'}",function (response) {
+        alert(response)
+    });
 </script>
 </body>
 </html>
